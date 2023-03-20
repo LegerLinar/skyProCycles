@@ -3,6 +3,7 @@ public class Main {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static void task1 () {
@@ -36,4 +37,12 @@ public class Main {
         }
     }
 
+    public static void task4(){
+        System.out.println("Задача 4");
+//        Выведите в консоль все числа от 10 до −10 от бо́льшего числа к меньшему.
+
+        for(int i = 10; i > -11; i--){
+            System.out.println("Число " + i);
+        }
+    }
 }
