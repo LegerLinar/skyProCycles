@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -71,4 +72,15 @@ public class Main {
             System.out.println( i );
         }
     }
+
+    public static void task7(){
+        System.out.println("Задача 7");
+//        Напишите программу, которая выводит в консоль последовательность чисел:
+//1 2 4 8 16 32 64 128 256 512
+
+        for(int i = 2; i <=512; i = i * 2){
+            System.out.println(i);
+        }
+    }
+
 }
