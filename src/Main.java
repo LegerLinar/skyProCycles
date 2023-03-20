@@ -8,13 +8,19 @@ public class Main {
         System.out.println("Задача 1");
 //        С помощью цикла for выведите в консоль все числа от 1 до 10.
 
-        for(int i = 1; i < 11; i++)
+        for(int i = 1; i < 11; i++) {
             System.out.println("Число " + i);
+        }
     }
 
 
     public static void task2 () {
         System.out.println("Задача 2");
-//        ... // Пишем код для задачи 2
+//        С помощью цикла for выведите в консоль все числа от 10 до 1.
+
+        for(int i = 10; i > 0; i--) {
+            System.out.println("Число " + i);
+        }
+
     }
 }
