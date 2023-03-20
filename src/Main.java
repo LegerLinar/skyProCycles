@@ -7,6 +7,9 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
+        task9();
+        task10();
     }
 
     public static void task1() {
@@ -80,6 +83,60 @@ public class Main {
 
         for(int i = 2; i <=512; i = i * 2){
             System.out.println(i);
+        }
+    }
+
+    public static void task8(){
+        System.out.println("Задача 8");
+
+//       Посчитайте с помощью цикла for сумму годовых накоплений, если каждый месяц вы
+//       будете откладывать по 29 000 рублей «в банку».
+//Выведите сумму накоплений за каждый месяц в консоль в формате:
+// «Месяц …, сумма накоплений равна … рублей».
+
+        int saving = 29000;
+        int total = 0;
+
+        for (int i = 0; i <= 12; i++){
+            System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей");
+            total = total + saving;
+        }
+    }
+
+    public static void task9(){
+        System.out.println("Задача 9");
+//        Перепишите решение задачи выше при условии, что деньги вы
+//        откладывать будете не «в банку», а в банк под проценты — 12% годовых.
+//        Выведите сумму накоплений за каждый месяц в консоль в формате: «Месяц …,
+//        сумма накоплений равна … рублей».
+
+        int saving = 29000;
+        int total = 0;
+
+        for(int i = 0; i<= 12; i++){
+            System.out.println("Месяц " + i + " , сумма накоплений равна " + total + " рублей");
+            total = total + total/100;
+            total = total + saving;
+        }
+    }
+
+    public static void task10(){
+        System.out.println("Задача 10");
+//        Напишите программу, которая выводит в консоль таблицу умножения на 2:
+//2*1=2
+//2*2=4
+//2*3=6
+//2*4=8
+//2*5=10
+//2*6=12
+//2*7=14
+//2*8=16
+//2*9=18
+//2*10=20
+
+        for(int i = 1; i<= 10; i++){
+            int multiplyBase = 2 * i;
+            System.out.println("2*" + i + "=" + multiplyBase);
         }
     }
 
