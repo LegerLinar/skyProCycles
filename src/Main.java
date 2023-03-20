@@ -5,6 +5,7 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
     }
 
     public static void task1() {
@@ -58,6 +59,16 @@ public class Main {
             } else {
                 System.out.println(i + " год является високосным");
             }
+        }
+    }
+
+    public static void task6(){
+        System.out.println("Задача 6");
+//        Напишите программу, которая выводит в консоль последовательность чисел:
+//7 14 21 28 35 42 49 56 63 70 77 84 91 98
+
+        for(int i = 7; i <= 98; i = i + 7){
+            System.out.println( i );
         }
     }
 }
