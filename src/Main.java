@@ -10,6 +10,7 @@ public class Main {
         task8();
         task9();
         task10();
+        secondClassTask1();
     }
 
     public static void task1() {
@@ -138,6 +139,26 @@ public class Main {
             int multiplyBase = 2 * i;
             System.out.println("2*" + i + "=" + multiplyBase);
         }
+    }
+
+    public static void secondClassTask1(){
+        System.out.println("Циклы 2. Задача 1");
+//            Продолжите работать с кодом, который вы написали в предыдущем уроке — в задачах с накоплениями.
+//С помощью цикла while посчитайте, сколько месяцев потребуется, чтобы накопить 2 459 000 рублей при условии,
+// что первоначально мы имеем 0 рублей и готовы откладывать по 15 тысяч рублей.
+//Результат программы должен быть выведен в консоль с тем количеством месяцев,
+// которое необходимо для накопления данной суммы. Формат сообщения: «Месяц …, сумма накоплений равна … рублей» .
+        int total = 0;
+        int salary = 15_000;
+        int monthsCounter = 0;
+
+        while(total <= 2_459_000){
+//            total += total/100;
+            monthsCounter++;
+            total += salary;
+                System.out.println("Месяц " + monthsCounter + ", сумма накоплений равна " + total + " рублей");
+        }
+
     }
 
 }
