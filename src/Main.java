@@ -15,6 +15,7 @@ public class Main {
         secondClassTask3();
         secondClassTask4();
         secondClassTask5();
+        secondClassTask6();
     }
 
     public static void task1() {
@@ -231,7 +232,7 @@ public class Main {
         int monthsCounter = 0;
 
         while (totalSavings <= 12_000_000){
-            totalSavings = totalSavings + totalSavings/100;
+            totalSavings = totalSavings + 7 * totalSavings/100;
             totalSavings = totalSavings + savings;
             monthsCounter++;
             System.out.println("Месяц " + monthsCounter + " сумма накоплений " + totalSavings + " рублей");
@@ -250,15 +251,35 @@ public class Main {
         int monthsCounter = 0;
 
         while (totalSavings <= 12_000_000){
-            totalSavings = totalSavings + totalSavings/100;
+            totalSavings = totalSavings + 7 * totalSavings/100;
             totalSavings = totalSavings + savings;
             monthsCounter++;
             if (monthsCounter % 6 == 0) {
                 System.out.println("Месяц " + monthsCounter + " сумма накоплений " + totalSavings + " рублей");
             }
         }
-
     }
 
+    public static void secondClassTask6(){
+        System.out.println("Циклы 2. Задача 6");
+//        Василий решил, что будет копить деньги ближайшие 9 лет.
+//        Он хочет знать, какой будет сумма его накоплений каждые полгода на протяжении этих 9 лет.
+//Исходная сумма всё та же — 15 тысяч рублей, проценты банка – 7% ежемесячно.
+//Напишите программу, которая будет выводить сумму накоплений за каждые полгода в течение 9 лет.
+
+        int totalSavings = 15_000;
+        int monthlySavings = 15_000;
+        int monthsCounter = 0;
+        int yearsPlans = 12 * 9;
+        do{
+            totalSavings += 7 * totalSavings/100;
+            totalSavings += monthlySavings;
+            monthsCounter++;
+            if(monthsCounter % 6 == 0){
+                System.out.println("Месяц " + monthsCounter + ", сумма накоплений равна " + totalSavings + " рублей.");
+            }
+        } while(monthsCounter <= yearsPlans);
+
+    }
 
 }
