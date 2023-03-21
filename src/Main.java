@@ -14,6 +14,7 @@ public class Main {
         secondClassTask2();
         secondClassTask3();
         secondClassTask4();
+        secondClassTask5();
     }
 
     public static void task1() {
@@ -235,6 +236,26 @@ public class Main {
             monthsCounter++;
             System.out.println("Месяц " + monthsCounter + " сумма накоплений " + totalSavings + " рублей");
 
+        }
+
+    }
+    public static void secondClassTask5(){
+        System.out.println("Циклы 2. Задача 5");
+//        Видоизмените программу таким образом, чтобы в консоль выводились не все месяцы подряд,
+//        а только каждый шестой.
+//        Должны быть видны накопления за 6, 12, 18, 24-й и следующие месяцы.
+
+        int totalSavings = 15000;
+        int savings = 15000;
+        int monthsCounter = 0;
+
+        while (totalSavings <= 12_000_000){
+            totalSavings = totalSavings + totalSavings/100;
+            totalSavings = totalSavings + savings;
+            monthsCounter++;
+            if (monthsCounter % 6 == 0) {
+                System.out.println("Месяц " + monthsCounter + " сумма накоплений " + totalSavings + " рублей");
+            }
         }
 
     }
