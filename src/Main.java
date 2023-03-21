@@ -12,6 +12,8 @@ public class Main {
         task10();
         secondClassTask1();
         secondClassTask2();
+        secondClassTask3();
+        secondClassTask4();
     }
 
     public static void task1() {
@@ -192,5 +194,50 @@ public class Main {
         }
         }
     }
+
+    public static void secondClassTask3(){
+        System.out.println("Циклы 2. Задача 3");
+
+//        В стране Y население равно 12 миллионов человек.
+//Рождаемость составляет 17 человек на 1000, смертность — 8 человек.
+// Рассчитайте, какая численность населения будет через 10 лет,
+// если показатели рождаемости и смертности постоянны.
+//В консоль выведите результат операции на каждый год в формате:
+// «Год …, численность населения составляет …»
+        int countryYPopulation = 12_000_000;
+//        double birthrate = 17 / 1000;
+//        double mortality = 8 / 1000;
+        int years = 0;
+
+        while (years < 10){
+            countryYPopulation+= 17 * countryYPopulation/1000;
+            countryYPopulation+= 8 * countryYPopulation/1000;
+            years++;
+            System.out.println("Год " + years + " численность населения составляет " + countryYPopulation);
+        }
+
+    }
+    public static void secondClassTask4(){
+        System.out.println("Циклы 2. Задача 4");
+//        Василий решил положить деньги на накопительный счет, где каждый месяц к сумме его вклада
+//        добавляется еще 7%. Первоначальная сумма вклада — 15 тысяч рублей.
+//Вычислите и выведите в консоль, сколько месяцев Василию нужно будет копить, чтобы собрать сумму
+// в 12 миллионов рублей при условии, что процент банка от накоплений не меняется, а всегда равен 7%.
+//Выведите в консоль результат программы с указанием суммы накоплений по каждому месяцу.
+
+        int totalSavings = 15000;
+        int savings = 15000;
+        int monthsCounter = 0;
+
+        while (totalSavings <= 12_000_000){
+            totalSavings = totalSavings + totalSavings/100;
+            totalSavings = totalSavings + savings;
+            monthsCounter++;
+            System.out.println("Месяц " + monthsCounter + " сумма накоплений " + totalSavings + " рублей");
+
+        }
+
+    }
+
 
 }
